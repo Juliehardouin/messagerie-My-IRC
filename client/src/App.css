@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Great+Vibes&family=Lato&family=Montserrat&family=Press+Start+2P&display=swap');
+
+/* HSL colors = HSL stands for hue, saturation, and lightness. */
+/* em = unité de mesure, qui dépends de l'élément parent */
+/* rem = unité de mesure (Root em), qui dépends de notre body HTML = taille plus prévisible */
+/* :root = c'est notre racine projet pour créer des variables en CSS */
+/* ::before = sert à insérer quelque chose avec le contenu de chaque élément sélectionné (de l'élément parent) */
+/* :focus permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire). */
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 90%;
+  max-width: 1200px;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1 {
+  background-color: #20202085;
+  margin: 0;
+  padding: 7%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.274);
+} 
+
+.container-main {
+  display: flex;
+  height: 100vh;
+  background-color:#ffffff00
+}
+
+.container-chat {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  background-color: #202020;
+}
+.container-room {
+  flex: 1;
+  }
+
+.container-users {
+  flex: 1;
+}
+
+.container-room,
+.container-users {
+  text-align: center;
+  background-color: #2f2e3c;
+  color: white;
+}
+
+
+#messages {
+  flex: 1;
+  overflow-y: scroll;
+  background-color: #41404e;
+  margin: 0;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#messages p {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 10px;
+  color: white;
+  background-color: #2e3136;
+  width: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.459);
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  border: none;
+  background-color: #2f2e3c;
+}
+
+#name {
+  flex: 1;
+}
+
+
+#message {
+  flex: 4;
+}
+
+#users {
+  width: 100%;
+  text-align: center;
+}
+
+#users p {
+  border: 1px solid rgba(29, 28, 28, 0.459);
+  border-radius: 5px;
+  padding: 3%;
+  margin: 3%;
+  background-color: #41404e;
+  box-shadow: rgb(15, 18, 20) 3px 3px 6px 0px inset, rgba(26, 23, 23, 0.5) -3px -3px 6px 1px inset;
+  overflow-x: scroll;
+}
+
+input {
+  padding: 1%;
+  margin: 0.85em 0;
+  border-radius: 4px;
+}
+
+#tabs {
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+#tabs li.active {
+  box-shadow: 0 0 50px rgb(63, 50, 109);
+  border: 2px solid rgb(129, 122, 156);
+  border-radius: 10px;
+  background-color: rgb(39, 40, 40);
+  font: bold;
+  margin: 15px;
+}
+
+ul li {
+  padding: 12px 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+li:hover {
+  cursor : pointer;
+  box-shadow: 0 0 50px rgb(63, 50, 109);
+  border: 2px solid rgb(129, 122, 156);
+  border-radius: 10px;
+  background-color: rgb(39, 40, 40);
+  font: bold;
+  margin: 10px;
+}
+
+:root {
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21%16%);
+}
+
+.neon_button {
+  display: inline-block;
+  font-family: 'Balsamiq Sans', cursive;
+  flex: 1;
+  color: rgb(129, 122, 156);
+  color: var(--clr-neon);
+  background: var(--clr-bg);
+  border: currentColor 0.125em solid;
+  border-radius: 0.25em;
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 1.5rem;
+  padding: 0.25em 1.25em;
+  margin: 0.5em;
+  
+  text-shadow: 0 0 0.5em currentColor ;
+  
+  box-shadow: inset 0 0 0.125em var(--clr-neon), 0 0 0.5em var(--clr-neon);
+  position: relative;
+  
+  transition: background-color 100ms linear;
+}
+
+neon_button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1.5em);
+  opacity: 0.7;
+}
+
+.neon_button::hover {
+  background: var(--clr-neon);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+neon_button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.neon_button:hover, 
+.neon_button:focus {
+  background: var(--clr-neon);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon_button:hover::before,
+.neon_button:focus::before{
+  opacity: 1;
+}
+
+.neon_button:hover::after,
+.neon_button:focus::after{
+  opacity: 1;
+}
