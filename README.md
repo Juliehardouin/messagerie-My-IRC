@@ -1,3 +1,15 @@
+
+# messagerie-My-IRC
+Système de messagerie réalisé en React avec socket.IO et Node.js
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+LE PROJET
+*********
+Projet Epitech web@cademy où il fallait réaliser un système de messagerie avec des rooms, en utilisant Socket.IO.
+Technos = React, Socket.IO, Node.js, CSS 3
+
+
 LANCER LE PROJET 
 ****************
 
@@ -53,7 +65,3 @@ C'est quoi les props ?
 Les 3 ... servent à DESTRUCTURER le tableau = on destructure le tableau messages, comme une boite où on vide tous les messages, et ensuite on recréé un tableau avec tous les messages dans des petites cases (des tableaux dans des tableaux), et ON Y INSERE LE NOUVEAU MESSAGE
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-# messagerie-My-IRC
-Système de messagerie réalisé en React avec socket.IO et Node.js
